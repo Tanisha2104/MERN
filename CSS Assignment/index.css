@@ -1,0 +1,42 @@
+h1{
+    color: red;
+}
+
+h2{
+    color: rgb(50, 245, 47);
+}
+
+span{
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.italic{
+    text-decoration: underline;
+}
+
+.dot-list{
+    color: brown;
+    letter-spacing: 5px;
+}
+
+h3{
+    color: brown;
+    font-weight: lighter;
+}
+
+#box1{
+    color: brown;
+    font-size: xx-small;
+}
+
+#box2{
+    color: brown;
+    font-style: italic;
+}
+
+a{
+    color: brown;
+    background-color: yellow;
+    text-decoration: none;
+}
