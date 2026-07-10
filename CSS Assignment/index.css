@@ -1,41 +1,41 @@
-h1{
+h1 {
     color: red;
 }
 
-h2{
+h2 {
     color: rgb(50, 245, 47);
 }
 
-span{
+span {
     background-color: yellow;
     font-weight: bold;
 }
 
-.italic{
+.italic {
     text-decoration: underline;
 }
 
-.dot-list{
+.dot-list {
     color: brown;
     letter-spacing: 5px;
 }
 
-h3{
+h3 {
     color: brown;
     font-weight: lighter;
 }
 
-#box1{
+#box1 {
     color: brown;
     font-size: xx-small;
 }
 
-#box2{
+#box2 {
     color: brown;
     font-style: italic;
 }
 
-a{
+a {
     color: brown;
     background-color: yellow;
     text-decoration: none;
