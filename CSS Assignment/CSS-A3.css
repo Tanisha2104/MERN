@@ -1,0 +1,168 @@
+.heading {
+    width: 100%;
+    background-image: linear-gradient(to right, red, green, 60%, yellow);
+    text-decoration: underline;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.list {
+    background-color: turquoise;
+    border: 2px solid red;
+    border-radius: 15px;
+    width: 800px;
+    margin: 15px auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+.list ul {
+    display: inline-block;
+    text-align: left;
+}
+
+.lorem-divs {
+    background-color: aquamarine;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+.box1,
+.box2,
+.box3,
+.box4 {
+    background-color: #00FFFF;
+    border: 2px solid green;
+    border-radius: 15px;
+    width: 360px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.outerbox {
+    display: grid;
+    grid-template-columns: 360px 360px 360px;
+    gap: 40px;
+    padding: 0px 0px 0px 30px;
+}
+
+.box4 {
+    position: relative;
+    left: 410px;
+}
+
+.heading2 {
+    text-decoration: underline;
+    font-weight: bold;
+    background-image: linear-gradient(to right, red, yellow, red);
+    font-size: 20px;
+    text-align: center;
+}
+
+.students {
+    background-image: radial-gradient(blue, aqua, green);
+    display: flex;
+    justify-content: space-evenly;
+    height: 200px;
+    align-items: center;
+}
+
+.s1,
+.s2,
+.s3,
+.s4 {
+    border: 2px solid red;
+    background-color: yellow;
+    color: brown;
+    text-align: center;
+    text-decoration: underline;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 200px;
+    height: 100px;
+    padding-bottom: 10px;
+}
+
+.s1 ul,
+.s2 ul,
+.s3 ul,
+.s4 ul {
+    line-height: 30px;
+    position: relative;
+    right: 20px;
+}
+
+.grid-box {
+    border: 2px solid black;
+    margin: 5px 0px;
+    width: 1250px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    color: white;
+    gap: 5px;
+}
+
+.h {
+    background-color: red;
+    text-align: center;
+    grid-column: 1/5;
+}
+
+.one {
+    background-color: lightgreen;
+    width: 360px;
+    height: 70px;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}
+
+.two {
+    background-color: lightblue;
+    width: 360px;
+    height: 70px;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}
+
+.three {
+    background-color: blue;
+    width: 360px;
+    height: 70px;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+}
+
+.four {
+    background-color: black;
+    text-decoration: underline;
+    width: 130px;
+    height: 185px;
+    grid-column-start: 4;
+grid-row: 2/8;
+}
+
+.five {
+    background-color: orange;
+    grid-column: 1/4;
+    height: 100px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.last {
+    background-color: aqua;
+    grid-column: 1/5;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
