@@ -216,10 +216,11 @@ main {
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
-    overflow: hidden; /* needed for the image zoom below */
+    overflow: hidden;
+    /* needed for the image zoom below */
 }
 
-.card:hover{
+.card:hover {
     cursor: pointer;
     transform: translateY(-8px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
@@ -270,7 +271,7 @@ main {
     color: white;
     position: relative;
     top: 20px;
-    left: 320px; 
+    left: 320px;
     font-size: 25px;
     z-index: 2;
     transition: color 0.2s ease-in-out;
@@ -337,3 +338,69 @@ main {
     color: #E85B3D;
     opacity: 1;
 }
+
+@media screen and (max-width:1250px) {
+    input {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .sidebar {
+        display: none;
+    }
+
+    .side-content.active {
+        display: none;
+    }
+
+    .page-title {
+        display: none;
+    }
+
+    input {
+        display: none;
+    }
+}
+
+@media screen and (max-width:850px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .left {
+        width: 0;
+        padding: 0;
+        display: none;
+    }
+
+    .page-title {
+        display: flex;
+    }
+}
+@media screen and (max-width:510px) {
+    .cards {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 25px;
+    }
+
+    .heart{
+        left: 410px;
+    }
+
+    .page-title {
+        display: flex;
+    }
+
+    button{
+        display: none;
+    }
+
+    .site-footer{
+        padding: 10px 10px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
