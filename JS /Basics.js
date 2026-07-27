@@ -2,6 +2,8 @@
 // let age = prompt("Enter your age : ")
 // console.log(age)
 
+// "use strict"
+
 //1.Ways to print in javascript
 // console.log("Hello World");
 // alert("meme");
@@ -167,23 +169,17 @@ console.log(myDate.getHours());
 console.log(myDate.getMinutes());
 console.log(myDate.getSeconds());
 
-
-
-
-
-
-
-
 //1
-// var number = 4567
-// let firstDigit = number.toString()[0]
-// console.log(firstDigit)
+var number = 4567
+let firstDigit = number.toString()[0]
+console.log(firstDigit)
 
 //2
-// let str1 = "TANISHA"
-// console.log(str1.split('').reverse().join(''))
+str1 = "TANISHA"
+console.log(str1.split('').reverse().join(''))
+console.log(str1.toLowerCase());
 
-
+console.log(`${5} + ${5} = ${5 + 5} `)//String Template Literals
 
 //Hoisting is a default behaviour of JavaScript.
 //Ecma script 5 => var
@@ -200,3 +196,17 @@ console.log(myDate.getSeconds());
 // console.log(d)
 // console.log(x);
 // console.log(y);
+
+//Write a prgoram to check anagram in String
+function anagramCheck(s1,s2){
+    if(s1.length != s2.length){
+        return false;
+    }
+    else if(s1.split('').sort().join('')===s2.split('').sort().join('') ){
+        return true
+    }
+}
+
+let string1 = "listen" ;
+let string2 = "silent" ;
+console.log(anagramCheck(string1,string2));
