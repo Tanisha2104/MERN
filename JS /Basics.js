@@ -122,10 +122,10 @@ do {
 
 //9.Break and Continue Statements
 for (var i = 0; i <= arr1.length; i++) {
-    if(i == 2){
+    if (i == 2) {
         continue;
     }
-    if(i == 7){
+    if (i == 7) {
         break;
     }
     console.log(arr1[i]);
@@ -146,16 +146,16 @@ console.log(myArr.unshift("Tweety"));//gives length of new array
 console.log(myArr.toString());// gives array as a string
 console.log(myArr.sort());// sorts element of array according to dictionary
 
-let arr2 = [ 1,23,4455, 687, 78, 213, 111];
+let arr2 = [1, 23, 4455, 687, 78, 213, 111];
 console.log(arr2.sort());
-console.log(arr2.splice(4,6));//removes the elements from a range 
+console.log(arr2.splice(4, 6));//removes the elements from a range 
 
 //11. String Methods in JavaScript
 let newString = "JavaScript is a programming language is";
 console.log(newString.length);
 console.log(newString.indexOf("is"));
 console.log(newString.lastIndexOf("is"));
-console.log(newString.slice(37,39));
+console.log(newString.slice(37, 39));
 console.log(newString.replace("JavaScript", "Java"));
 console.log(newString.replaceAll("is", "are"));
 
@@ -198,15 +198,78 @@ console.log(`${5} + ${5} = ${5 + 5} `)//String Template Literals
 // console.log(y);
 
 //Write a prgoram to check anagram in String
-function anagramCheck(s1,s2){
-    if(s1.length != s2.length){
+function anagramCheck(s1, s2) {
+    if (s1.length != s2.length) {
         return false;
     }
-    else if(s1.split('').sort().join('')===s2.split('').sort().join('') ){
+    else if (s1.split('').sort().join('') === s2.split('').sort().join('')) {
         return true
     }
 }
+let string1 = "listen";
+let string2 = "silent";
+console.log(anagramCheck(string1, string2));
 
-let string1 = "listen" ;
-let string2 = "silent" ;
-console.log(anagramCheck(string1,string2));
+//Ways of function - normal , function expression, arrow function
+tan();//This will work anywhere in the whole code . it allocates memory for its function.//Fully hoisted
+function tan() {
+    console.log("Normal Function");
+}
+// abc(); This will not work as it cannot work before initialization.throws reference error//not hoisted
+const abc = function () {
+    console.log("Function Expression");
+}
+// xyz(); This will not work as it cannot work before initialization
+const xyz = () => {
+    console.log("Arrow function")
+}
+
+//Program to get vowel in a String
+function vowelCount(str1) {
+    let count = 0;
+    let str2 = str1.toLowerCase().split("");
+    for (let i= 0; i< str2.length; i++) {
+        const element = str2[i];
+        if (element == "a" || element == "e" || element == "i" || element == "o" || element == "u") {
+            count += 1;
+        }
+    }
+    console.log(count);
+}
+vowelCount("abdbchdhfcbdhbcjhecgejhcajkgduiriioijehiozoaiioixoa");
+
+//Callback & a impure function
+function greeting(hello, india){
+    let processed = hello.toUpperCase();
+    console.log(processed);
+    india();
+}
+function callb(){
+    console.log("hello i am a callback");
+}
+greeting("hello", callb)
+
+//pure function 
+function pure(a,b){
+    return a + b;
+}
+pure();
+
+//High-Order function
+function highfun(){
+    return function inisdeHigh(){
+        console.log("I am returned funciton in a function. high order function")
+    }
+}
+highfun()();
+
+//IIFI (Immedialtely invoked function expression)
+(function (){
+    console.log("IIFI");
+})();
+
+
+let arr9 = new Array(3);
+arr9[0] = "egrgr";
+arr9[1] = 343;
+console.log(arr9)
