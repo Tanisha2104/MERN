@@ -1,4 +1,4 @@
-//If-Else Assignment and Ternary Operator
+// ASSIGNMENT - 1 If-Else Statements and Ternary Operator
 console.log("If-Else Questions:")
 //1. Write a program that determines whether a given number is positive or negative.
 var num1 = -40;
@@ -130,7 +130,8 @@ else {
 
 //10. Write a simple number guessing game. Provide a secret number and a guess. Based on those numbers, give players clues if their guess is higher, lower, or correct.
 let guess = 50;
-let input = Number(prompt("Enter a number :"));
+let input = 25;
+// let input = Number(prompt("Enter a number :"));
 if (guess == input) {
     console.log("10. You Got the right number")
 }
@@ -200,3 +201,5 @@ console.log(`T9. ${buttonText}`);
 //10. Greater Number finder(2 numbers)
 let max = a > b ? a : b;
 console.log(`T10. ${max}`);
+
+//Assignment 1 Completed

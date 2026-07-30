@@ -195,7 +195,7 @@ console.log(`${5} + ${5} = ${5 + 5} `)//String Template Literals
 // }
 // console.log(d)
 // console.log(x);
-// console.log(y);
+// console.log(y);scope
 
 //Write a prgoram to check anagram in String
 function anagramCheck(s1, s2) {
@@ -228,7 +228,7 @@ const xyz = () => {
 function vowelCount(str1) {
     let count = 0;
     let str2 = str1.toLowerCase().split("");
-    for (let i= 0; i< str2.length; i++) {
+    for (let i = 0; i < str2.length; i++) {
         const element = str2[i];
         if (element == "a" || element == "e" || element == "i" || element == "o" || element == "u") {
             count += 1;
@@ -239,37 +239,51 @@ function vowelCount(str1) {
 vowelCount("abdbchdhfcbdhbcjhecgejhcajkgduiriioijehiozoaiioixoa");
 
 //Callback & a impure function
-function greeting(hello, india){
+function greeting(hello, india) {
     let processed = hello.toUpperCase();
     console.log(processed);
     india();
 }
-function callb(){
+function callb() {
     console.log("hello i am a callback");
 }
 greeting("hello", callb)
 
 //pure function 
-function pure(a,b){
+function pure(a, b) {
     return a + b;
 }
 pure();
 
 //High-Order function
-function highfun(){
-    return function inisdeHigh(){
+function highfun() {
+    return function inisdeHigh() {
         console.log("I am returned funciton in a function. high order function")
     }
 }
 highfun()();
 
 //IIFI (Immedialtely invoked function expression)
-(function (){
+(function () {
     console.log("IIFI");
 })();
 
-
+//Arrays
 let arr9 = new Array(3);
 arr9[0] = "egrgr";
 arr9[1] = 343;
 console.log(arr9)
+
+function sumNum(...num) {
+    return num.reduce((a, b) => a + b, 0)
+}
+console.log(sumNum(2, 3, 45, 6, 4, 3, 21, 32));
+
+const arr3 = Array.from([2, 3, 4, 5], x => x * x);
+console.log(arr3);
+
+const numberValue = [34, 5, 3, 5, 24]
+numberValue.sort((a, b) => a - b);//ascending
+console.log(numberValue);
+numberValue.sort((a, b) => b - a);//descending
+console.log(numberValue);

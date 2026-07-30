@@ -1,5 +1,7 @@
-//Patterns Using Loops
+// ASSIGNMENT - 2 Patterns Using Loops
+
 let n = 5;
+
 //1.Square hollow Rectangle
 for (let i = 1; i <= n; i++) {
     let row = "";
@@ -423,8 +425,6 @@ for (let i = n - 1; i > 0; i--) {
     }
     console.log(row);
 }
-
-
 
 
 //Assignment 2 Completed
