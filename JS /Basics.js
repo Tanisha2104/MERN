@@ -287,3 +287,11 @@ numberValue.sort((a, b) => a - b);//ascending
 console.log(numberValue);
 numberValue.sort((a, b) => b - a);//descending
 console.log(numberValue);
+
+console.log(numberValue.reduce((a, b) => a + b, 0));
+console.log(numberValue.map((a) => a * a));
+console.log(numberValue.filter((a) => a % 2 == 0))
+
+const arr4 =['234','str','formula','hi','hello','bye bye', 'sorry', 'thanks'];
+const[num5,...num6]=arr4;
+console.log(num5);
