@@ -292,6 +292,54 @@ console.log(numberValue.reduce((a, b) => a + b, 0));
 console.log(numberValue.map((a) => a * a));
 console.log(numberValue.filter((a) => a % 2 == 0))
 
-const arr4 =['234','str','formula','hi','hello','bye bye', 'sorry', 'thanks'];
-const[num5,...num6]=arr4;
+const arr4 = ['234', 'str', 'formula', 'hi', 'hello', 'bye bye', 'sorry', 'thanks'];
+const [num5, ...num6] = arr4;
 console.log(num5);
+
+//Object 
+let obj1 = {
+    name: "Tanisha",
+    occupation: "student",
+    newFun: function () {
+        return () => {
+            return `this is nested arrow function ${this.occupation}`;
+        }
+    }
+};
+obj1.name = "Tweety";
+obj1["Age"] = 21;
+// console.log(obj1);
+
+delete obj1["name"];
+// console.log(obj1);
+
+console.log(obj1.newFun()());
+
+// function book(title, author, price, access) {
+//     console.log(this);
+// }
+// book();
+
+console.log(this);
+//It is showing empty object because it is not working on a browser. We are initiating it in a external platform with the help of node.js. 
+// It shows an empty object {} because of how Node.js handles JavaScript files as modules.When you run a file in Node.js, your code does not run in the global scope. Instead, Node.js wraps your entire file inside a hidden function before executing it.
+// console.log(global);
+
+const deployement = {
+    code: "frontend",
+    backcode: "backend",
+    server: "host",
+    key1: function () {
+        return {
+            insidefun: () => {
+                console.log(`arrow function trying to access inside from property ${this.server} and ${this.backcode}`);
+            }
+        }
+    }
+};
+deployement.key1().insidefun();
+
+// deployement.deploy();
+
+
+//Basics Done
