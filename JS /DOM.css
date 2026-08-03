@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+border: 2px solid red;
+margin: 3px 0;
+background-color: cyan;
+padding: 9px;
+}
+
+.bg-primary{
+    background-color: plum;
+}
+
+.text-success{
+    color: white;
+}
