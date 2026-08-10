@@ -120,16 +120,102 @@ console.log(dog instanceof Animal);
 
 //============================== Advanced ==================================
 // 15. Prototype Method Sharing. Refactor Question 13's `Rectangle` constructor function so that `getArea()` and `getPerimeter()` methods are attached to `Rectangle.prototype` instead of inside the constructor body. - Why is attaching methods to `.prototype` better for memory efficiency than defining them inside the constructor body?
+function Rectangle2(width, height) {
+  this.width = width;
+  this.height = height;
+}
+Rectangle2.prototype.getArea = function () {
+  return this.width * this.height;
+};
+Rectangle2.prototype.getPerimeter = function () {
+  return 2 * (this.width + this.height);
+};
+const rect_1 = new Rectangle2(5, 10);
+const rect_2 = new Rectangle2(4, 6);
+console.log(rect_1.getArea()); // 50
+console.log(rect_1.getPerimeter()); // 30
+console.log(rect_2.getArea()); // 24
+console.log(rect_2.getPerimeter()); // 20
 
 /* 16. Object Immutability (`Object.freeze` vs `Object.seal`). Given `const config = { host: "localhost", port: 8080 };`:- What happens under `Object.freeze(config)` vs `Object.seal(config)` when you attempt to:
 1. Modify `config.port = 3000`
 2. Add `config.debug = true`
 3. Delete `config.host` */
+const config = { host: "localhost", port: 8080 };
+Object.freeze(config);
+console.log(config);
+Object.seal(config); //addition and deletion not done
+console.log(config);
+config.port = 3000;
+console.log(config);
+config.debug = true;
+console.log(config);
+delete config.host;
+console.log(config);
+// Action                             Object.seal().   Object.freeze()
+// Add new properties                    ❌ No             ❌ No
+// Delete existing properties            ❌ No             ❌ No
+// Modify existing property values        Yes              ❌ No
+// Change property descriptors           ❌ No             ❌ No
 
 // 17. Encapsulation with Factory Functions. Write a factory function `createBankAccount(initialBalance)` that returns an object containing `deposit(amount)`, `withdraw(amount)`, and `getBalance()` methods. - Ensure `balance` cannot be accessed or modified directly from outside the object (using local closure variables instead of `this`).
+function createBankAccount(initialBalance) {
+  let balance = initialBalance; // private variable
+  return {
+    deposit: function (amount) {
+      balance = balance + amount;
+      console.log("Deposited:", amount, "| Balance:", balance);
+    },
+    withdraw: function (amount) {
+      if (amount > balance) {
+        console.log("Not enough money!");
+      } else {
+        balance = balance - amount;
+        console.log("Withdrew:", amount, "| Balance:", balance);
+      }
+    },
+    getBalance: function () {
+      return balance;
+    },
+  };
+}
+const myAccount = createBankAccount(100);
+myAccount.deposit(50); // Deposited: 50 | Balance: 150
+myAccount.withdraw(30); // Withdrew: 30 | Balance: 120
+console.log(myAccount.getBalance());
+console.log(myAccount.balance); // undefined (can't touch it directly!)
 
 // 18. Safe Nested Property Accessor. Write a function `getNestedValue(obj, path)` where `path` is a dot-separated string (e.g., `"user.profile.email"`). - The function should safely traverse `obj` and return the nested value if it exists, or `undefined` if any key in the path is missing.
+const data = {
+  user: {
+    profile: {
+      email: "test@example.com",
+    },
+  },
+};
+console.log(data.user.profile.email);
 
 // 19. Inverting Keys and Values. Write a function `invertObject(obj)` that takes a flat object (e.g., `{ a: "x", b: "y" }`) and returns a new object where keys become values and values become keys (`{ x: "a", y: "b" }`).
+function invertObject(obj) {
+  const result = {};
+  for (let key in obj) {
+    const value = obj[key];
+    result[value] = key; // swap: value becomes the new key, key becomes the new value
+  }
+  return result;
+}
+const original1 = { a: "x", b: "y", c: "z" };
+console.log(invertObject(original1)); // { x: "a", y: "b", z: "c" }
 
 // 20. Custom Object Difference Detector. Write a function `getObjectDiff(obj1, obj2)` that compares two flat objects and returns a new object containing only properties from `obj2` whose values differ from `obj1` or do not exist in `obj1`. - **Example:** `getObjectDiff({ a: 1, b: 2 }, { a: 1, b: 99, c: 3 })` $\rightarrow$ `{ b: 99, c: 3 }`
+function getObjectDiff(obj1, obj2) {
+  return Object.entries(obj2).reduce((diff, [key, value]) => {
+    if (obj1[key] !== value) diff[key] = value;
+    return diff;
+  }, {});
+}
+console.log(getObjectDiff({ a: 1, b: 2 }, { a: 1, b: 99, c: 3 }));
+console.log(getObjectDiff({ x: 1, y: 2 }, { x: 1, y: 2 }));
+console.log(getObjectDiff({}, { a: 1 }));
+
+//Javascript Assignment - 6 Completed !
