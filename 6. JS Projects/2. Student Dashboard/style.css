@@ -67,6 +67,18 @@ button:hover {
   gap: 25px;
 }
 
+@media screen and (max-width: 850px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .card {
   background-color: #ffffff;
   border: 2px solid #e5e7eb;
@@ -118,4 +130,6 @@ button:hover {
   color: #6b7280;
   font-size: 14px;
 }
+
+
 /* CSS Completed */
