@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Inter:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", system-ui, sans-serif;
+  background: radial-gradient(circle at top, #232838 0%, #12141c 70%);
+  color: #e7e9f0;
+}
+
+/* The "deck": a dark plate the keycap sits on */
+.container {
+  background: #1a1d29;
+  border: 1px solid #2b2f42;
+  border-radius: 20px;
+  padding: 48px 56px;
+  width: 380px;
+  text-align: center;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+}
+
+h1 {
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+  font-weight: 700;
+  color: #8fe3c7; /* mint accent, used sparingly */
+  margin-bottom: 8px;
+}
+
+.instruction {
+  font-size: 0.9rem;
+  color: #8a8fa3;
+  margin-bottom: 32px;
+}
+
+/* The keycap itself: light surface + layered shadow
+   so it reads as a raised, physical key */
+.display {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #1a1d29;
+  background: #eef0ff;
+  width: 140px;
+  height: 140px;
+  line-height: 140px;
+  margin: 0 auto 32px;
+  border-radius: 18px;
+  box-shadow:
+    0 8px 0 #b9bde0,
+    /* the "sides" of the keycap */ 0 14px 20px rgba(0, 0, 0, 0.4);
+  transition:
+    transform 0.08s ease,
+    box-shadow 0.08s ease;
+}
+
+/* Optional: add/remove this class in JS on keydown/keyup
+   to make the key look pressed */
+.display.pressed {
+  transform: translateY(6px);
+  box-shadow:
+    0 2px 0 #b9bde0,
+    0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info p {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.85rem;
+  background: #232838;
+  border: 1px solid #2b2f42;
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #c4c8d6;
+}
+
+#keyName {
+  color: #8fe3c7; /* highlight the primary reading */
+}
+
+#key {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+/* CSS Completed */

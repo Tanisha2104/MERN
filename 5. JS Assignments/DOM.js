@@ -87,24 +87,56 @@ document.querySelector("#btn3").addEventListener("click", function () {
   box.classList.toggle("red");
 });
 document.querySelector("#btn4").addEventListener("click", function () {
-    box.classList.toggle("big");
+  box.classList.toggle("big");
   box.classList.contains("big");
 });
 
 //Form Validation
-document.querySelector('#form').addEventListener('click',(e)=>{
-    e.preventDefault();
-    e.stopPropagation()
-    console.log("form click")
-})
-document.querySelector('#inputtext').addEventListener('click',(e)=>{
-    console.log("input click")
-    e.stopPropagation()
-})
-document.querySelector('#submit').addEventListener('click',(e)=>{
-    e.preventDefault();
-    e.stopPropagation()
-    console.log("submit click")
-    console.log(event.target)
-})
+document.querySelector("#form").addEventListener("click", (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  console.log("form click");
+});
+document.querySelector("#inputtext").addEventListener("click", (e) => {
+  console.log("input click");
+  e.stopPropagation();
+});
+document.querySelector("#submit").addEventListener("click", (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  console.log("submit click");
+  console.log(event.target);
+});
 //preventDefault, stopPropogation, bubbling , capture - true, delegation
+
+let arrOfobj = [
+  {
+    name: "Tanisha",
+    age: 21,
+    college: "MSIT",
+  },
+  {
+    name: "Tanisha",
+    age: 21,
+    college: "MSIT",
+  },
+  {
+    name: "Tanisha",
+    age: 21,
+    college: "MSIT",
+  },
+  {
+    name: "Tanisha",
+    age: 21,
+    college: "MSIT",
+  },
+  {
+    name: "Tanisha",
+    age: 21,
+    college: "MSIT",
+  },
+];
+
+let jso1 = JSON.stringify(arrOfobj);
+console.log(jso1);
+localStorage.setItem("array", jso1);
