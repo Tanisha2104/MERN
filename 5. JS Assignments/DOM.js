@@ -140,3 +140,4 @@ let arrOfobj = [
 let jso1 = JSON.stringify(arrOfobj);
 console.log(jso1);
 localStorage.setItem("array", jso1);
+
