@@ -7,17 +7,39 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>🎨 Color Picker</h1>
+    <div class="container" id="container">
+      <div class="top-bar">
+        <h1>Color Picker</h1>
+        <button id="darkModeBtn">🌙</button>
+      </div>
 
-      <input type="color" id="colorPicker" value="#3498db" />
-      <span id="colorValue">#3498db</span>
+      <div class="color-box" id="colorBox"></div>
 
-      <div id="colorBox"></div>
+      <p id="hexValue"></p>
 
-      <button id="themeToggle">🌙 Dark Mode</button>
+      <div class="button-group">
+        <button id="copyBtn">Copy</button>
+        <button id="randomBtn">Random</button>
+      </div>
+
+      <div class="slider-group">
+        <label>Red: <span id="rValue"></span></label>
+        <input type="range" id="redSlider" min="0" max="255" />
+      </div>
+
+      <div class="slider-group">
+        <label>Green: <span id="gValue"></span></label>
+        <input type="range" id="greenSlider" min="0" max="255" />
+      </div>
+
+      <div class="slider-group">
+        <label>Blue: <span id="bValue"></span></label>
+        <input type="range" id="blueSlider" min="0" max="255" />
+      </div>
     </div>
 
     <script src="script.js"></script>
   </body>
 </html>
+
+<!-- HTML Completed -->

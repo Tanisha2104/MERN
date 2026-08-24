@@ -141,3 +141,37 @@ let jso1 = JSON.stringify(arrOfobj);
 console.log(jso1);
 localStorage.setItem("array", jso1);
 
+//Deep Copy and Shallow Copy
+const newObj = {
+  name: "tanisha",
+  age: 21,
+  obj1: {
+    name: "nobita",
+    age: 22,
+    obj2: {
+      firstname: "firstname",
+    },
+    arr: ["sef", "abc", "wth"],
+  },
+  address: "MSIT",
+};
+console.log(newObj);
+const copyObj = JSON.parse(JSON.stringify(newObj));
+copyObj.obj1.arr[0] = "xyz";
+
+console.log(copyObj);
+console.log(newObj);
+const copycopy = structuredClone(newObj);
+copycopy.obj1.obj2.firstname = "lastname";
+console.log(copycopy);
+console.log(newObj);
+
+//Curring
+function name1(a) {
+  return function (b) {
+    return function (c) {
+      return a + b + c;
+    };
+  };
+}
+console.log(name1(4)(5)(6));
