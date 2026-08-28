@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+  padding: 30px 15px;
+}
+
+.container {
+  max-width: 650px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #222;
+}
+
+.subtitle {
+  text-align: center;
+  color: gray;
+  margin: 8px 0 25px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  font-size: 15px;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+small {
+  display: block;
+  color: red;
+  margin-top: 5px;
+  min-height: 16px;
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 15px 0;
+}
+
+.terms input {
+  width: auto;
+}
+
+.terms label {
+  margin: 0;
+}
+
+button {
+  width: 100%;
+  padding: 13px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #357abd;
+}
+
+#successMessage {
+  text-align: center;
+  color: green;
+  font-weight: bold;
+  margin-top: 15px;
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Registration Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Employee Registration</h1>
+    <p class="subtitle">Fill in your details to register</p>
+
+    <form id="employeeForm">
+
+      <!-- Employee ID -->
+      <div class="form-group">
+        <label>Employee ID</label>
+        <input
+          type="text"
+          id="employeeId"
+          placeholder="Example: EMP-1234"
+        />
+        <small id="employeeIdError"></small>
+      </div>
+
+      <!-- Full Name -->
+      <div class="form-group">
+        <label>Full Name</label>
+        <input
+          type="text"
+          id="fullName"
+          placeholder="Example: Tanisha Mittal"
+        />
+        <small id="nameError"></small>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label>Email</label>
+        <input
+          type="text"
+          id="email"
+          placeholder="Example: abc@gmail.com"
+        />
+        <small id="emailError"></small>
+      </div>
+
+      <!-- Mobile -->
+      <div class="form-group">
+        <label>Mobile Number</label>
+        <input
+          type="text"
+          id="mobile"
+          placeholder="Enter 10 digit number"
+        />
+        <small id="mobileError"></small>
+      </div>
+
+      <!-- Department -->
+      <div class="form-group">
+        <label>Department</label>
+
+        <select id="department">
+          <option value="">Select Department</option>
+          <option>Information Technology</option>
+          <option>Human Resources</option>
+          <option>Finance</option>
+          <option>Marketing</option>
+          <option>Operations</option>
+        </select>
+
+        <small id="departmentError"></small>
+      </div>
+
+      <!-- Designation -->
+      <div class="form-group">
+        <label>Designation</label>
+        <input
+          type="text"
+          id="designation"
+          placeholder="Example: Software Developer"
+        />
+      </div>
+
+      <!-- Date -->
+      <div class="form-group">
+        <label>Date of Joining</label>
+        <input type="date" id="joiningDate" />
+      </div>
+
+      <!-- Salary -->
+      <div class="form-group">
+        <label>Salary</label>
+        <input
+          type="number"
+          id="salary"
+          placeholder="Enter salary"
+        />
+        <small id="salaryError"></small>
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label>Password</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter strong password"
+        />
+        <small id="passwordError"></small>
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="form-group">
+        <label>Confirm Password</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          placeholder="Confirm password"
+        />
+        <small id="confirmPasswordError"></small>
+      </div>
+
+      <!-- Profile Photo -->
+      <div class="form-group">
+        <label>Profile Photo</label>
+        <input
+          type="file"
+          id="profilePhoto"
+          accept=".jpg,.jpeg,.png"
+        />
+        <small id="photoError"></small>
+      </div>
+
+      <!-- Resume -->
+      <div class="form-group">
+        <label>Upload Resume (PDF only)</label>
+        <input
+          type="file"
+          id="resume"
+          accept=".pdf"
+        />
+        <small id="resumeError"></small>
+      </div>
+
+      <!-- Terms -->
+      <div class="terms">
+        <input type="checkbox" id="terms" />
+        <label for="terms">
+          I accept the Terms & Conditions
+        </label>
+      </div>
+
+      <small id="termsError"></small>
+
+      <button type="submit">Register Employee</button>
+
+    </form>
+
+    <p id="successMessage"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
