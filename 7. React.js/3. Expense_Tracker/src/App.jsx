@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import ExpenseForm from "/components/ExpenseForm.jsx";
+import Navbar from "/components/navbar.jsx";
 import "./App.css";
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
 
   return (
     <>
+    <Navbar/>
       <div className="min-h-screen bg-gray-50 py-10">
         <div className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
           <h1 className="font-bold text-3xl text-center">Expense Tracker</h1>
